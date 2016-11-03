@@ -5,29 +5,83 @@
 		</title>
 	</head>
 
-	<link rel="stylesheet" href = "assets/css/style.css">
+	<!--Google fonts--> 	
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Boogaloo" rel="stylesheet"> 
+	<!--my stylesheet-->
+	<link rel= "stylesheet" href = "assets/css/style.css">
+
+	<!-- link to jQuery and js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!--<script type = "text/javascript" src = "app.js"></script>-->
+
 <body>
- 	True or False Shark Trivia
 
- 1. 	Sharks rarely stop swimming. 	
- 		T. most shark species will drown if thye stop swimming. The do not have the muscles they need to pump water through their mouth and over their gills. 
+<div id ="body">
+ 	<h1> True or False Shark Trivia </h1>
 
- 
- 2. 	If you never enter the ocean, you are safe from shark attacks.
-		F. Bull sharks, one of the more agressive species, have a fondness for freshwater. They have been spotten in bays, lagoons and rivers than can be thousands of miles inland. 
+ 	<div class = "questionDiv"> </div>	
 
- 3.		Shark attacks are one of the most common events among 				floridians.
-		F. Getting struck by lightning along with many other crazy deaths are more common than getting eaten by a Shark. IN reality, sharks are just afraid of us as we are them. 
+ 		<div id = "click">
+		<button id = "trueBtn" > True</button> 
+ 		<button id = "falseBtn"> False</button>
+		</div>
+ 		
+</div>
 
-4. 		Great Whites are the worlds largest sharks. 
-		F. Whale Sharks are the world's biggest, ______
+<script> 
 
-5. 		Sharks are older than dinosuars. 
-		T. They have been on the earth for over 400 million years, they predate pratically everything that has a spine, including humans and dinosuars. 				
+	var triviaQuestions = 
+				 ['Sharks rarely stop swimming', 
+				'If you never enter the ocean, you are safe from shark attacks.',
+				'Shark attacks are one of the most common events among floridians.',
+				'Great Whites are the worlds largest sharks.',
+				'Sharks are older than dinosuars.',];
 
+	//to display questions in above array
+
+	var questionNumber = 0;	
+
+$(".questionDiv").html(triviaQuestions[questionNumber])	
+
+//question0
+		$("button").click(function(){
+			if (questionNumber == 0){
+				console.log("correct!");
+				
+				//moves and displays next question
+					questionNumber = questionNumber + 1;
+
+					$(".questionDiv").html(triviaQuestions[questionNumber])	
+				} else {
+					console.log("Incorrect!");
+
+				} 
+
+//question1	
 		
- 			
+			
+
 	
+
+
+	//final closing tag	
+			})
+
+			
+
+
+			
+				
+					
+					
+
+
+
+			
+
+
+</script>
 
 </body>
 </html>

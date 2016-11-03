@@ -1,4 +1,45 @@
 body {
-	background-image: url(http://www.ehelpfultips.com/optical%20illusion%20waves.jpg);
-	background-repeat:repeat;
+	background-image: url('http://img0.mxstatic.com/wallpapers/dc373713bee277127756c60c0df32f20_large.jpeg');
+	
+}
+
+#body {
+	background-color: #0099ff;
+	border-color: #006699;
+	margin-right: 400px;
+	margin-left:400px;
+	margin-top: 20%;
+}
+
+.questionDiv {
+	font-family: 'Boogaloo', cursive;
+	font-size:25px;
+	text-align:center;
+	margin-top:5px;
+	margin-right:7px;
+	margin-left:7px;
+	
+}
+
+.answers {
+	font-family: 'Bangers', cursive;
+}
+
+h1 {
+	font-family: 'Bangers', cursive;
+	font-size:40px;
+	color: white;
+	text-align:center;
+	padding-top:7px;
+}
+
+button {
+	border:1px solid #f2f2f2;
+	padding:10px;
+	margin-bottom:10px;
+}
+
+#click {
+	text-align:center;
+	padding-top:20px;
 }
