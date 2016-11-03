@@ -1,4 +1,4 @@
-$(documnet).ready(function(){
+$(document).ready(function(){
 
 	var correctAnswers = 0;
 	var incorrectAnswers = 0;
@@ -12,37 +12,88 @@ var triviaQuestions =
 				'If you never enter the ocean, you are safe from shark attacks.',
 				'Shark attacks are one of the most common events among floridians.',
 				'Great Whites are the worlds largest sharks.',
-				'Sharks are older than dinosuars.',]
+				'Sharks are older than dinosuars.',];
 
 	//to display questions in above array
 
-	questionNumber = 0;	
+	var questionNumber = 0;	
 
-$("questionDiv").html(triviaQuestions[questionNumber])	
+$(".questionDiv").html(triviaQuestions[questionNumber])	
 
-		$('button').click(function(){
-			if (questionNumber == 0){
+var checkQuestion = function(questionNum){
 
-				if($(this).html() == "True") {
-					alert ("Correct!")
-					//moves and displays next question
+}
+
+//question0
+		$("#trueBtn").click(function(){
+			if (questionNumber == questionNum){
+				console.log("correct!");
+				
+				//moves and displays next question
+					questionNumber++;
+
+					$(".questionDiv").html(triviaQuestions[questionNumber])	
+				} else {
+					console.log("Incorrect!");
+
+				} 
+		$("#falseBtn".click(function(){
+
+})
+//question1	
+		
+			if (questionNumber == 1){
+				console.log("correct!");
+				
+				//moves and displays next question
+					questionNumber++;
+
+					$(".questionDiv").html(triviaQuestions[questionNumber])	
+				} else {
+					console.log("Incorrect!");
+
+				} 
+			
+//question2
+			if (questionNumber == 2){
+				console.log("correct!");
+				
+				//moves and displays next question
 					questionNumber = questionNumber + 1;
 
-					$("#questionDiv").html(triviaQuestions[questionNumber])
-
+					$(".questionDiv").html(triviaQuestions[questionNumber])	
 				} else {
-					alert ("Incorrect!")
+					console.log("Incorrect!");
 
-					$("#questionDiv").html(triviaQuestions[questionNumber])
-				}
-			}
+				} 
 
-		}	
-})		
+//question3
+			if (questionNumber == 3){
+				console.log("correct!");
+				
+				//moves and displays next question
+					questionNumber = questionNumber + 1;
 
+					$(".questionDiv").html(triviaQuestions[questionNumber])	
+				} else {
+					console.log("Incorrect!");
 
+				} 
 
-	
+//question4
+			if (questionNumber == 4){
+				console.log("correct!");
+				
+				//moves and displays next question
+					questionNumber = questionNumber + 1;
+
+					$(".questionDiv").html(triviaQuestions[questionNumber])	
+				} else {
+					console.log("Incorrect!");
+
+				} 				
+	//final closing tag	
+			})
 
 
 /*for (var i = triviaQuestions.length - 1; i >= 0; i++) {
@@ -68,3 +119,26 @@ use css to make correct choice green and incorrect choice red.
 */
 
 })
+
+
+//timer attempt
+
+// var timeInterval = setInterval (function()), 30); 
+// var secondsSpan = clock.querySelector('.seconds');
+
+// function updateClock(){
+// 	var = getTimeRemaining(endtime);
+
+// 	clock.innerHTML = 'seconds:' + t.seconds;
+
+// 	secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+// 		if(t.seconds == 0){
+// 			clearInterval(timeInterval);
+// 		}
+// }
+
+
+
+
+
