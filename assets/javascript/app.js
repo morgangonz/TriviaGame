@@ -58,7 +58,7 @@ var checkQuestion = function(){
 //set counter to 30
 
 
-var timeInterval = 30 
+var timeInterval = 10 
 	
 	//when either button gets clicked run the stop fn
 	$('button').on('click', stop);
@@ -71,7 +71,7 @@ function run(){
 //decrease number by one interval
 function decrement(){
 		timeInterval--;
-		$('#timerDiv').html('<h3>' + timeInterval + '</h3>');
+		$('.seconds').html('<h3>' + timeInterval + '</h3>');
 
 		if (timeInterval ===0){
 			stop();
