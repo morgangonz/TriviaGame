@@ -55,23 +55,41 @@ var checkQuestion = function(){
 
 
 //timer attempt
+//set counter to 30
+
 
 var timeInterval = 30 
-var secondsSpan = clock.querySelector('.seconds');
+	
+	//when either button gets clicked run the stop fn
+	$('button').on('click', stop);
 
-function updateClock(){
-	getTimeRemaining(endtime);
+//run fn and decrease by 1 second
+function run(){
+	counter = setInterval(decrement, 1000);
+}	
 
-clock.innerHTML = '.seconds:' + t.seconds;
+//decrease number by one interval
+function decrement(){
+		timeInterval--;
+		$('#timerDiv').html('<h3>' + timeInterval + '</h3>');
 
-secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-
-if(t.seconds == 0){
-	clearInterval(timeInterval);
+		if (timeInterval ===0){
+			stop();
+				alert('Time\'s up!');
+		}
+}
  
+//stop fn
+function stop (){
+	clearInterval(counter);
 }
 
-}
+//begin run fn 
 
+run();
+
+
+
+//closing tag- do not touch
 });
 
