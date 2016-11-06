@@ -1,11 +1,5 @@
 $(document).ready(function(){
 
-	var correctAnswers = 0;
-	var incorrectAnswers = 0;
-	var unanswered = 0;
-	var setNumber = 1;
-
-
 //array of 5 T/F questions
 var triviaQuestions = 
 				 ['Sharks rarely stop swimming', 
@@ -59,26 +53,25 @@ var checkQuestion = function(){
 			});
 	};
 
-});
 
 //timer attempt
 
-var timeInterval = setInterval (function()), 30); 
+var timeInterval = 30 
 var secondsSpan = clock.querySelector('.seconds');
 
 function updateClock(){
-var = getTimeRemaining(endtime);
+	getTimeRemaining(endtime);
 
-clock.innerHTML = 'seconds:' + t.seconds;
+clock.innerHTML = '.seconds:' + t.seconds;
 
 secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
 if(t.seconds == 0){
 	clearInterval(timeInterval);
- 		}
- }
+ 
+}
 
+}
 
-
-
+});
 
