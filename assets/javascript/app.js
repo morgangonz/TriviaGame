@@ -14,35 +14,28 @@ var triviaQuestions =
 				'Great Whites are the worlds largest sharks.',
 				'Sharks are older than dinosuars.',];
 
+
+//array of answers to above questions
+var triviaAnswers = 
+				['True, most shark species will drown if they stop swimming. The do not have the muscles they need to pump water through their mouth and over their gills.',
+				'False, Bull sharks, one of the more aggressive species, have a fondness for freshwater. They have been spotted in bays, lagoons and rivers than can be thousands of miles inland.',
+				'False, Getting struck by lightning along with many other crazy deaths are more common than getting eaten by a Shark. IN reality, sharks are just afraid of us as we are them.',
+				'False, Whale Sharks are the world\'s largest shark species, they can get up to 47,000lbs or more and span over 45 feet long. However, they are gentle giants!!!',
+				'True, They have been on the earth for over 400 million years, they predate practically everything that has a spine, including humans and dinosaurs.',];
+
+
 	//to display questions in above array
 
 	var questionNumber = 0;	
 
+	var currentAnswerVal = false;
+
 $(".questionDiv").html(triviaQuestions[questionNumber])	
 
-var checkQuestion = function(questionNum){
+var checkQuestion = function(){
 
-}
-
-//question0
-		$("#trueBtn").click(function(){
-			if (questionNumber == questionNum){
-				console.log("correct!");
-				
-				//moves and displays next question
-					questionNumber++;
-
-					$(".questionDiv").html(triviaQuestions[questionNumber])	
-				} else {
-					console.log("Incorrect!");
-
-				} 
-		$("#falseBtn".click(function(){
-
-})
-//question1	
 		
-			if (questionNumber == 1){
+			if (questionNumber == triviaQuestions){
 				console.log("correct!");
 				
 				//moves and displays next question
@@ -51,92 +44,39 @@ var checkQuestion = function(questionNum){
 					$(".questionDiv").html(triviaQuestions[questionNumber])	
 				} else {
 					console.log("Incorrect!");
+					questionNumber++;
 
 				} 
-			
-//question2
-			if (questionNumber == 2){
-				console.log("correct!");
-				
-				//moves and displays next question
-					questionNumber = questionNumber + 1;
+		
+		$("#trueButton").click(function(){
+			currentAnswerVal = true;
+				checkQuestion(questionNumber);
+		});		
 
-					$(".questionDiv").html(triviaQuestions[questionNumber])	
-				} else {
-					console.log("Incorrect!");
+		$("#falseBtn").click(function(){
+			currentAnswerVal = false;
+				checkQuestion(questionNumber);
+			});
+	};
 
-				} 
-
-//question3
-			if (questionNumber == 3){
-				console.log("correct!");
-				
-				//moves and displays next question
-					questionNumber = questionNumber + 1;
-
-					$(".questionDiv").html(triviaQuestions[questionNumber])	
-				} else {
-					console.log("Incorrect!");
-
-				} 
-
-//question4
-			if (questionNumber == 4){
-				console.log("correct!");
-				
-				//moves and displays next question
-					questionNumber = questionNumber + 1;
-
-					$(".questionDiv").html(triviaQuestions[questionNumber])	
-				} else {
-					console.log("Incorrect!");
-
-				} 				
-	//final closing tag	
-			})
-
-
-/*for (var i = triviaQuestions.length - 1; i >= 0; i++) {
-	triviaQuestions[i]
-
-function answerTrue(){
-	if (#true) documnet.getElementById(".answers").innerHTML = "Correct." 
-else documnet.getElementByID(".answers").innerHTML = "Incorrect."		
-}
-
-
-}
- list one question at a time, display T/F buttons.
-If answer is true and user clicks true, .on('click') display "correct" + reasoning.
-Else display "wrong/False" and proper reasoning. 
-
-find a way to show only one question at a time. After answer, 
-display next question btn to move on?
-
-
-use css to make correct choice green and incorrect choice red.
-
-*/
-
-})
-
+});
 
 //timer attempt
 
-// var timeInterval = setInterval (function()), 30); 
-// var secondsSpan = clock.querySelector('.seconds');
+var timeInterval = setInterval (function()), 30); 
+var secondsSpan = clock.querySelector('.seconds');
 
-// function updateClock(){
-// 	var = getTimeRemaining(endtime);
+function updateClock(){
+var = getTimeRemaining(endtime);
 
-// 	clock.innerHTML = 'seconds:' + t.seconds;
+clock.innerHTML = 'seconds:' + t.seconds;
 
-// 	secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
-// 		if(t.seconds == 0){
-// 			clearInterval(timeInterval);
-// 		}
-// }
+if(t.seconds == 0){
+	clearInterval(timeInterval);
+ 		}
+ }
 
 
 
