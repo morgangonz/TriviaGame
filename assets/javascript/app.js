@@ -56,7 +56,7 @@ function questionDisplay() {
 //when either button is clicked run THIS fn
 $(".btn").on('click', function(){
 	if ($(this).html() == triviaQuestions[questionNumber].answer){
-		//add one to each var
+		//if click correct answer, add one to each var
 		questionNumber++
 		correct++
 		answerDisplay()
@@ -67,18 +67,24 @@ $(".btn").on('click', function(){
 	}
 });
 
-//displays object answer for 5 seconds
+//displays object answer for 8 seconds in answer div
 function answerDisplay() {
 	$(".questionDiv").empty();
 	$('#answerDiv').html(triviaQuestions[questionNumber-1].message);
 	setTimeout(questionDisplay,8000);
 };
 
+//goes to next question
+//	next").on('click', function(){
+	//	triviaQuestions.question++
+	//}
 
 //timer attempt
-//set counter to 30
+//set counter
 
 var timeInterval = 10 
+
+//for (var i = 10; i >= 0; i++) {}
 	
 	//when either button gets clicked run the stop fn
 	$('.btn').on('click', stop);
@@ -87,6 +93,14 @@ var timeInterval = 10
 function run(){
 	counter = setInterval(decrement, 1000);
 }	
+
+//to reset 
+function reset(){
+	timeInterval--
+	$('#next').on('click', reset);
+		run();
+
+}
 
 //decrease number by one interval
 function decrement(){
@@ -107,6 +121,9 @@ function stop (){
 //begin run fn 
 
 run();
+
+
+	
 
 
 
